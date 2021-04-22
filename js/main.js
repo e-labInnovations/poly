@@ -63,8 +63,7 @@ const openDetailedItemModal = (id) => {
 const showFiles = () => {
   const dataEl = document.getElementById('data');
   const dataList = document.getElementById('dataList');
-  let ls = currentLocation.split('/');
-  console.log(ls);
+  
   
   dataList.innerHTML = "";
   

@@ -40,8 +40,9 @@
 <body>
   <ion-app>
     <ion-router use-hash="true">
-    <ion-route url="/about" component="add-item-page"></ion-route>
-    <ion-route url="/:id" component="home-page"></ion-route>
+    <ion-route url="/" component="home-page"></ion-route>
+    <ion-route url="/addItem" component="add-item-page"></ion-route>
+    <ion-route url="/editItem/:id" component="add-item-page"></ion-route>
     </ion-router>
     <ion-nav>
     </ion-nav>
