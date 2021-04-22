@@ -4,6 +4,7 @@ let categories = null;
 const api = 'https://script.google.com/a/gptcthirurangadi.in/macros/s/AKfycbyf-Aw34g4kz-uBPuGWUk4zhCsR0h4oqHCwS5Zd-sVtdAXCdloYV1-DRLjF7H_hut_x/exec?action=read';
 var mainData = null;
 var currentData = null;
+var cid = null;
 
 /*
 // Make a request for a user with a given ID
@@ -63,7 +64,7 @@ const openDetailedItemModal = (id) => {
 const showFiles = () => {
   const dataEl = document.getElementById('data');
   const dataList = document.getElementById('dataList');
-  
+  console.log(cid);
   
   dataList.innerHTML = "";
   

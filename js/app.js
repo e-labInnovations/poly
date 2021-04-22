@@ -8,6 +8,7 @@ Router.addEventListener('ionRouteDidChange', (e) => {
     let routeTo = e.detail.to;
     let routerFrom = e.detail.from;
     
+    
 })
 
 let enableDarkMode = localStorage.getItem('enableDarkMode')==="true"?true:false;
