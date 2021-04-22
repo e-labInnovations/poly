@@ -5,7 +5,7 @@ const api = 'https://script.google.com/a/gptcthirurangadi.in/macros/s/AKfycbyf-A
 var mainData = null;
 var currentData = null;
 
-  
+/*
 // Make a request for a user with a given ID
 axios.get(api)
   .then(function(response) {
@@ -48,6 +48,7 @@ axios.get(api)
   .then(function() {
     // always executed
   });
+  */
   
 //Handles
 //Open detailed item model in Home.js
@@ -60,11 +61,18 @@ const openDetailedItemModal = (id) => {
 }
 
 const showFiles = () => {
+  const dataEl = document.getElementById('data');
   const dataList = document.getElementById('dataList');
+  let ls = currentLocation.split('/');
+  console.log(ls);
+  
+  dataList.innerHTML = "";
   
   currentData.children.forEach(children => {
     let newItem = document.createElement("ion-item");
-    console.log(children);
+    newItem.setAttribute('href', children.id);
+    newItem.setAttribute('button', '');
+  
     newItem.innerHTML = `
     <ion-thumbnail slot="start">
       <img src="${children.iconlink}">
@@ -77,13 +85,16 @@ const showFiles = () => {
         Uploaded On : ${children.created}
       </p>
       <p>
-        adipiscing elit.
+        Credit : Unknown
       </p>
     </ion-label>
     `;
     dataList.append(newItem)
-    console.log(newItem);
   })
+}
+
+const handleItemSelect = (name) => {
+  alert(name)
 }
 
 //Show toast message
